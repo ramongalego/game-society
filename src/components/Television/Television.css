@@ -1,0 +1,18 @@
+.tv-outer {
+  background-image: url('../../assets/tv.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 375px;
+}
+
+.tv-inner {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 640px;
+  height: 360px;
+  left: 5px;
+  top: 5px;
+  position: relative;
+  margin: 0 auto;
+}
