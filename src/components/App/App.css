@@ -2,12 +2,12 @@
   position: absolute;
   width: 100%;
   background: darkgrey;
-  background-image: url('../../assets/pillar-background.png');
+  background-image: url('/assets/pillar-background.png');
   background-size: cover;
 }
 
 .overlay {
-  background-image: url('../../assets/background-overlay.png');
+  background-image: url('/assets/background-overlay.png');
   background-size: cover;
   width: 100%;
 }
@@ -20,14 +20,14 @@
   font-size: 0.85em;
   width: 220px;
   height: 60px;
-  background-image: url('../../assets/button-border.png');
+  background-image: url('/assets/button-border.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .main-logo {
-  background-image: url('../../assets/main-logo.png');
+  background-image: url('/assets/main-logo.png');
   width: 332px;
   height: 83px;
   cursor: pointer;

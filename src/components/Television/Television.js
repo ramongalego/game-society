@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Television.css';
 
 const Television = ({ currentImage }) => (
@@ -9,5 +10,9 @@ const Television = ({ currentImage }) => (
       className='tv-inner' />
   </div>
 );
+
+Television.propTypes = {
+  currentImage: PropTypes.string.isRequired
+}
 
 export default Television;

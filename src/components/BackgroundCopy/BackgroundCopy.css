@@ -1,0 +1,32 @@
+.bg-copy-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-family: AFB-Bold;
+  text-transform: uppercase;
+}
+
+.bg-copy {
+  color: rgba(23, 31, 40, 0.1);
+  z-index: 0;
+  font-size: 20vw;
+}
+
+.extra-copy {
+  position: relative;
+  top: -240px;
+  color: #fff;
+}
+
+.overlay-copy {
+  font-size: 2em;
+}
+
+.overlay-cta {
+  font-size: 4em;
+  background: -webkit-linear-gradient(left, #38da58, #ffd000);
+  background-clip: text;
+  width: 30%;
+  margin: 0 auto;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import './Carousel.css';
 import Phone from '../Phone';
 import Television from '../Television';
@@ -8,6 +9,12 @@ class Carousel extends Component {
     images: ['amazeballs', 'bullshitter'],
     currentImage: 0,
     intervalId: null
+  }
+
+  static propTypes = {
+    isSecret: PropTypes.bool,
+    copyTop: PropTypes.string,
+    copyBottom: PropTypes.string
   }
 
   handleCarouselTiming = () => {
@@ -34,7 +41,7 @@ class Carousel extends Component {
 
   render() {
     const { images, currentImage } = this.state;
-    const { isSecret, children } = this.props;
+    const { isSecret, copyTop, copyBottom } = this.props;
 
     if (isSecret) {
       return <div>secret carousel</div>;
@@ -44,6 +51,7 @@ class Carousel extends Component {
       <Fragment>
         <div>
           <Television currentImage={images[currentImage]} />
+          {copyTop && <p className='carousel-copy'>{copyTop}</p>}
           <div className='dot-container'>
             {images.map((image, index) => (
               <div
@@ -52,6 +60,7 @@ class Carousel extends Component {
                 onClick={() => this.handleCarouselClick(index)} />
             ))}
           </div>
+          {copyBottom && <p className='carousel-copy'>{copyBottom}</p>}
         </div>
         <Phone currentImage={images[currentImage]} />
       </Fragment>

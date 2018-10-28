@@ -1,5 +1,5 @@
 .phone-outer {
-  background-image: url('../../assets/iphone.png');
+  background-image: url('/assets/iphone.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 250px;

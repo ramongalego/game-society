@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Phone.css';
 
 const Phone = ({ currentImage }) => (
@@ -9,5 +10,9 @@ const Phone = ({ currentImage }) => (
       className='phone-inner' />
   </div>
 );
+
+Phone.propTypes = {
+  currentImage: PropTypes.string.isRequired
+}
 
 export default Phone;

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: AFB-Regular;
+  src: url(./fonts/AgencyFB-Regular.ttf);
+}
+
+@font-face {
+  font-family: AFB-Bold;
+  src: url(./fonts/AgencyFB-Bold.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
