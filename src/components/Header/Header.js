@@ -20,7 +20,7 @@ class Header extends Component {
       <MenuItems 
         onSelectItem={this.handleSelectItem}
         selectedItem={selectedItem} />
-      <button className='primary-button'>PLAY NOW</button>
+      <a href='http://www.playgs.tv'><button className='primary-button'>PLAY NOW</button></a>
     </div>
     );
   }

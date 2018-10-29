@@ -6,7 +6,7 @@ const BackgroundCopy = ({ bgCopy, overlayCopy, overlayCta }) => (
   <div className='bg-copy-container'>
     <h1 className='bg-copy'>{bgCopy}</h1>
     <div className='extra-copy'>
-      {overlayCopy && <h2 className='overlay-copy'>{overlayCopy}</h2>}
+      {overlayCopy && <h2 className={overlayCta ? 'overlay-copy' : 'overlay-single-copy'}>{overlayCopy}</h2>}
       {overlayCta && <h2 className='overlay-cta'>{overlayCta}</h2>}
     </div>
   </div>

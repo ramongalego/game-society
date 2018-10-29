@@ -6,27 +6,33 @@ import Television from '../Television';
 
 class Carousel extends Component {
   state = {
-    images: ['amazeballs', 'bullshitter'],
-    currentImage: 0,
+    content: [{
+      images: ['amazeballs', 'bullshitter'],
+      copies: [
+        'Mauris convallis mi ipsum, facilisis varius risus ultrices eu. Praesent magna felis, viverra mollis imperdiet non, fringilla nec dolor. Cras eget pulvinar metus. Nam rutrum nisl id imperdiet placerat.', 
+        'Curabitur at gravida enim. Integer orci nulla, euismod sed arcu at, efficitur congue felis. Nullam nec consectetur massa. Donec condimentum, libero eu ornare bibendum, ex dui tincidunt dui, quis pharetra diam mi ultrices ante.'
+      ],
+    }],
+    currentContent: 0,
     intervalId: null
   }
 
   static propTypes = {
     isSecret: PropTypes.bool,
-    copyTop: PropTypes.string,
-    copyBottom: PropTypes.string
+    copyTop: PropTypes.bool,
+    copyBottom: PropTypes.bool
   }
 
   handleCarouselTiming = () => {
-    const { currentImage, images } = this.state;
+    const { currentContent, content } = this.state;
 
-    currentImage < (images.length - 1)
-      ? this.setState({ currentImage: currentImage + 1 })
-      : this.setState({ currentImage: 0 });
+    currentContent < (content[0].images.length - 1)
+      ? this.setState({ currentContent: currentContent + 1 })
+      : this.setState({ currentContent: 0 });
   }
 
   handleCarouselClick = (index) => {
-    this.setState({ currentImage: index });
+    this.setState({ currentContent: index });
   }
 
   componentDidMount() {
@@ -40,7 +46,7 @@ class Carousel extends Component {
   }
 
   render() {
-    const { images, currentImage } = this.state;
+    const { content, currentContent } = this.state;
     const { isSecret, copyTop, copyBottom } = this.props;
 
     if (isSecret) {
@@ -50,19 +56,19 @@ class Carousel extends Component {
     return (
       <Fragment>
         <div>
-          <Television currentImage={images[currentImage]} />
-          {copyTop && <p className='carousel-copy'>{copyTop}</p>}
+          <Television currentImage={content[0].images[currentContent]} />
+          {copyTop && <p className='carousel-copy'>{content[0].copies[currentContent]}</p>}
           <div className='dot-container'>
-            {images.map((image, index) => (
+            {content[0].images.map((image, index) => (
               <div
                 key={image}
-                className={`dot ${currentImage === index ? 'dot-selected': ''}`}
+                className={`dot ${currentContent === index ? 'dot-selected': ''}`}
                 onClick={() => this.handleCarouselClick(index)} />
             ))}
           </div>
-          {copyBottom && <p className='carousel-copy'>{copyBottom}</p>}
+          {copyBottom && <p className='carousel-copy'>{content[0].copies[currentContent]}</p>}
         </div>
-        <Phone currentImage={images[currentImage]} />
+        <Phone currentImage={content[0].images[currentContent]} />
       </Fragment>
     );
   }

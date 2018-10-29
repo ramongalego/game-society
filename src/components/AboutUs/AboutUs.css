@@ -1,0 +1,48 @@
+.section-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  background: #0d151e;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.members-list li {
+  display: flex;
+  flex-direction: row;
+  margin: 0 40px 100px 40px;
+}
+
+.members-item h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: AFB-Bold;
+  font-size: 2em;
+}
+
+.members-item .member-position {
+  color: #d6cf47;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.members-item .member-bio {
+  width: 250px;
+  color: #fff;
+}
+
+.members-item img {
+  width: 160px;
+  border-radius: 5px;
+  margin-left: 20px;
+}

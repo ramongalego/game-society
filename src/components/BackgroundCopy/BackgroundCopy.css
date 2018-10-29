@@ -22,6 +22,11 @@
   font-size: 2em;
 }
 
+.overlay-single-copy {
+  font-size: 4em;
+  margin-top: 25px;
+}
+
 .overlay-cta {
   font-size: 4em;
   background: -webkit-linear-gradient(left, #38da58, #ffd000);
