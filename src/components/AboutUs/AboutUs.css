@@ -12,13 +12,13 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .members-list li {
   display: flex;
   flex-direction: row;
-  margin: 0 40px 100px 40px;
+  margin: 0 40px 90px 40px;
 }
 
 .members-item h3 {
@@ -42,7 +42,7 @@
 }
 
 .members-item img {
-  width: 160px;
+  width: 180px;
   border-radius: 5px;
   margin-left: 20px;
 }

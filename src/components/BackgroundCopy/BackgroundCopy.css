@@ -4,12 +4,14 @@
   position: relative;
   font-family: AFB-Bold;
   text-transform: uppercase;
+  margin-bottom: -140px;
 }
 
 .bg-copy {
-  color: rgba(23, 31, 40, 0.1);
+  color: #1e2834;
+  opacity: 0.2;
   z-index: 0;
-  font-size: 20vw;
+  font-size: 18rem;
 }
 
 .extra-copy {

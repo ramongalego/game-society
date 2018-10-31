@@ -7,12 +7,12 @@ class AboutUs extends Component {
     members: [{
       name: 'Justin Ireland',
       position: 'Founder',
-      bio: `Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Sed at nibh egestas, cursus quam eget, hendrerit urna.`,
+      bio: `Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend.`,
       avatar: 'https://via.placeholder.com/160'
     }, {
       name: 'Jared Eden',
       position: 'Founder',
-      bio: 'Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Sed at nibh egestas, cursus quam eget, hendrerit urna.',
+      bio: 'Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend. Phasellus dignissim vulputate ultricies. Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Proin sollicitudin sem eu augue ultrices, a venenatis nisi eleifend.',
       avatar: 'https://via.placeholder.com/160'
     }]
   }

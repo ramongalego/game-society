@@ -1,0 +1,59 @@
+.newsletter-container {
+  width: 100%;
+  height: 360px;
+  background: -webkit-linear-gradient(left, #a43ee7, #737ef6);
+}
+
+.newsletter-content {
+  position: relative;
+  top: -60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  color: white;
+}
+
+.newsletter-content form {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-content input {
+  flex-grow: 2;
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  height: 40px;
+  padding: 10px 0px 10px 20px;
+  font-style: italic;
+}
+
+.newsletter-content button {
+  position: relative;
+  border: none;
+  background:#0d151e;
+  color:white;
+  left: -105px;
+  height: 30px;
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.fa-envelope {
+  position: relative;
+  margin-left: 3px;
+  left: 8px;
+}
+
+.newsletter-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-copy h1 {
+  font-family: AFB-Bold;
+  font-size: 2.5em;
+}
