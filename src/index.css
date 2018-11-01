@@ -39,7 +39,15 @@ li {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
 }
 
 textarea, select, input, button { 

@@ -10,10 +10,8 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 40%;
-  /* margin: 150px 0px; */
-  margin-top: -230px;
+  margin: 80px 0px;
 }
 
 .contact-info h1 {
@@ -23,7 +21,7 @@
 
 .contact-info p {
   font-size: 0.9em;
-  margin-top: 30px;
+  margin: 20px 0px;
 }
 
 .contact-form {
@@ -32,6 +30,7 @@
   justify-content: center;
   width: 30%;
   margin: 150px 0px;
+  color: #fff;
 }
 
 .contact-form input {
@@ -40,6 +39,8 @@
   border-radius: 1px;
   height: 40px;
   padding-left: 15px;
+  color: #fff;
+  font-style: italic;
 }
 
 .contact-form button {
@@ -64,6 +65,63 @@
 }
 
 .contact-message {
+  border: none;
+  background: #0d151e;
+  border-radius: 1px;
+  height: 40px;
+  padding: 15px;
   margin-top: 10px;
   height: 150px!important;
+  color: #fff;
+  font-style: italic;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.info-container i {
+  font-size: 1.3em;
+  margin-right: 20px;
+  position: relative;
+  top: 6px;
+}
+
+.info-values {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-values p {
+  color: grey;
+  margin: 0;
+}
+
+.info-values h3 {
+  font-family: AFB-Bold;
+  text-transform: uppercase;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-container a {
+  cursor: pointer;
+}
+
+.social-container i {
+  margin: 50px 10px 0px 0px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.social-container a:first-child i {
+  border: 1px solid white;
+  color: black;
+  background: #fff;
 }

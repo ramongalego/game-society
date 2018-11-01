@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import './Header.css';
-
-const menuItems = ['HOME', 'WHAT IS GAME SOCIETY?', 'GAMES', 'ABOUT', 'CONTACT'];
+import { menuItems } from '../../util/constants';
 
 const MenuItems = ({ selectedItem, onSelectItem }) => (
   <Fragment>
