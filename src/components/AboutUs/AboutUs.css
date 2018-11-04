@@ -1,9 +1,12 @@
+.element {
+  width: 100%;
+}
+
 .section-about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 20px;
   background: #0d151e;
 }
 
@@ -13,6 +16,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 90px;
+  margin-top: -140px;
 }
 
 .members-list li {

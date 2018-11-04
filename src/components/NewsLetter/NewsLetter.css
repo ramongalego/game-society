@@ -5,6 +5,7 @@
 }
 
 .newsletter-content {
+  margin-top: -140px;
   position: relative;
   top: -60px;
   display: flex;

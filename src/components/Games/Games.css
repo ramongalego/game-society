@@ -1,0 +1,7 @@
+.section-game-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}

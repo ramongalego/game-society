@@ -1,9 +1,9 @@
 export const menuItems = [
-  'HOME', 
-  'WHAT IS GAME SOCIETY?', 
-  'GAMES', 
-  'ABOUT', 
-  'CONTACT'
+  'home', 
+  'what is game society?', 
+  'games', 
+  'about', 
+  'contact'
 ];
 
 export const contactInfo = [{

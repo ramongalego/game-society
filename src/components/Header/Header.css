@@ -5,21 +5,37 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-weight: 600;
   padding: 30px;
 }
 
-.header-container ul {
+.menu-list {
   display: flex;
   font-size: 0.9em;
+  font-weight: 600;
 }
 
-.header-container li {
+.menu-items {
   margin: 10px;
   cursor: pointer;
   padding: 3px 10px;
+  text-transform: uppercase;
 }
 
 .selected-menu {
   color: #75bf79;
+}
+
+.social-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-header a {
+  cursor: pointer;
+}
+
+.social-header i {
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.8em;
 }

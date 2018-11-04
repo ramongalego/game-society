@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header';
 import Welcome from '../Welcome';
+import Games from '../Games';
 import AboutUs from '../AboutUs';
 import NewsLetter from '../NewsLetter';
 import Contact from '../Contact';
+import Footer from '../Footer';
 
 class App extends Component {
   render() {
@@ -14,9 +16,11 @@ class App extends Component {
           <Header />
           <section className='content-container'>
             <Welcome />
+            <Games />
             <AboutUs />
             <NewsLetter />
             <Contact />
+            <Footer />
           </section>
         </div>
       </div>

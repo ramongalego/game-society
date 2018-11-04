@@ -4,6 +4,7 @@ import './Carousel.css';
 import Phone from '../Phone';
 import Television from '../Television';
 import { carouselContent } from '../../util/constants';
+import Swipeable from 'react-swipeable';
 
 class Carousel extends Component {
   state = {
@@ -15,6 +16,16 @@ class Carousel extends Component {
     isSecret: PropTypes.bool,
     copyTop: PropTypes.bool,
     copyBottom: PropTypes.bool
+  }
+
+  componentDidMount() {
+    const intervalId = setInterval(this.handleCarouselTiming, 5000);
+
+    this.setState({ intervalId });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
   }
 
   handleCarouselTiming = () => {
@@ -29,14 +40,10 @@ class Carousel extends Component {
     this.setState({ currentContent: index });
   }
 
-  componentDidMount() {
-    const intervalId = setInterval(this.handleCarouselTiming, 5000);
-
-    this.setState({ intervalId });
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.state.intervalId);
+  swiped(e, deltaX) {
+    // console.log("You Swiped...", e, deltaX, deltaY, isFlick, velocity);
+    deltaX < 0 ? console.log('Swiped left!') : console.log('Swiped right!');
+    // console.log('Swiped', deltaX);
   }
 
   render() {
@@ -49,7 +56,9 @@ class Carousel extends Component {
 
     return (
       <Fragment>
-        <div>
+        <Swipeable
+          onSwiped={this.swiped}
+        >
           <Television currentImage={carouselContent[0].images[currentContent]} />
           {copyTop && <p className='carousel-copy'>{carouselContent[0].copies[currentContent]}</p>}
           <div className='dot-container'>
@@ -61,7 +70,7 @@ class Carousel extends Component {
             ))}
           </div>
           {copyBottom && <p className='carousel-copy'>{carouselContent[0].copies[currentContent]}</p>}
-        </div>
+        </Swipeable>
         <Phone currentImage={carouselContent[0].images[currentContent]} />
       </Fragment>
     );

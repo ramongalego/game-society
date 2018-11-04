@@ -38,18 +38,26 @@ li {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
 }
 
 a:visited {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
 }
 
 textarea, select, input, button { 
   outline: none; 
+}
+
+Link {
+  cursor: pointer;
 }
