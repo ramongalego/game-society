@@ -34,9 +34,13 @@ export const members = [{
 
 export const carouselContent = [{
   images: ['amazeballs', 'bullshitter'],
-  copies: [
+  copiesCarouselOne: [
     'Mauris convallis mi ipsum, facilisis varius risus ultrices eu. Praesent magna felis, viverra mollis imperdiet non, fringilla nec dolor. Cras eget pulvinar metus. Nam rutrum nisl id imperdiet placerat.', 
     'Curabitur at gravida enim. Integer orci nulla, euismod sed arcu at, efficitur congue felis. Nullam nec consectetur massa. Donec condimentum, libero eu ornare bibendum, ex dui tincidunt dui, quis pharetra diam mi ultrices ante.'
+  ],
+  copiesCarouselTwo: [
+    '...', 
+    '...'
   ],
 }];
 

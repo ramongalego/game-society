@@ -12,7 +12,9 @@ const Footer = () => (
         <p>Aliquam condimentum, urna vitae semper finibus, dolor nisl fringilla eros, vel hendrerit metus orci in urna.</p>
         <div className='social-footer'>
           {socialMedia.map(social => (
-            <a href={social.link}>
+            <a 
+              key={social.icon}
+              href={social.link}>
               <i className={`fab fa-${social.icon}`} />
             </a>
           ))}

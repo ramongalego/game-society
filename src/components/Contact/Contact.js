@@ -12,7 +12,9 @@ class Contact extends Component {
             <h1>CONTACT INFORMATION</h1>
             <p>Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Ut in turpis eros. Praesent in rhoncus ante.</p>
             {contactInfo.map(info => (
-              <div className='info-container'>
+              <div 
+                key={info.icon}
+                className='info-container'>
                 <i className={`fas fa-${info.icon}`} />
                 <div className='info-values'>
                   <p>{info.title}</p>
@@ -22,7 +24,9 @@ class Contact extends Component {
             ))}
             <div className='social-container'>
               {socialMedia.map(social => (
-                <a href={social.link}>
+                <a
+                  key={social.icon}
+                  href={social.link}>
                   <i className={`fab fa-${social.icon}`} />
                 </a>
               ))}

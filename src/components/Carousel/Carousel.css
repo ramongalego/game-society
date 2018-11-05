@@ -23,3 +23,28 @@
   color: #fff;
   padding: 15px 0;
 }
+
+.bg-carousel-container {
+  align-self: center;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+  top: -50px;
+}
+
+.bg-carousel-container img {
+  width: 300px;
+}
+
+.bg-carousel-container i {
+  position: relative;
+  top: -100px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.tv-phone-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

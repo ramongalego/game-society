@@ -40,15 +40,28 @@ class Carousel extends Component {
     this.setState({ currentContent: index });
   }
 
+  handleCarouselArrowClick = (direction) => {
+    const { currentContent } = this.state;
+    const contentLimit = carouselContent[0].images.length - 1;
+
+    if (currentContent === 0 && direction === 'left') {
+      this.setState({ currentContent: contentLimit });
+    } else if (currentContent === contentLimit && direction === 'right') {
+      this.setState({ currentContent: 0 });
+    } else if (direction === 'left') {
+      this.setState({ currentContent: currentContent - 1 });
+    } else if (direction === 'right') {
+      this.setState({ currentContent: currentContent + 1 });
+    }
+  }
+
   swiped(e, deltaX) {
-    // console.log("You Swiped...", e, deltaX, deltaY, isFlick, velocity);
     deltaX < 0 ? console.log('Swiped left!') : console.log('Swiped right!');
-    // console.log('Swiped', deltaX);
   }
 
   render() {
     const { currentContent } = this.state;
-    const { isSecret, copyTop, copyBottom } = this.props;
+    const { isSecret, copyTop, copyBottom, bgCarousel } = this.props;
 
     if (isSecret) {
       return <div>secret carousel</div>;
@@ -56,22 +69,44 @@ class Carousel extends Component {
 
     return (
       <Fragment>
-        <Swipeable
-          onSwiped={this.swiped}
-        >
-          <Television currentImage={carouselContent[0].images[currentContent]} />
-          {copyTop && <p className='carousel-copy'>{carouselContent[0].copies[currentContent]}</p>}
-          <div className='dot-container'>
-            {carouselContent[0].images.map((image, index) => (
-              <div
-                key={image}
-                className={`dot ${currentContent === index ? 'dot-selected': ''}`}
-                onClick={() => this.handleCarouselClick(index)} />
-            ))}
-          </div>
-          {copyBottom && <p className='carousel-copy'>{carouselContent[0].copies[currentContent]}</p>}
-        </Swipeable>
-        <Phone currentImage={carouselContent[0].images[currentContent]} />
+        {bgCarousel &&
+          <div className='bg-carousel-container'>
+            <i 
+              onClick={() => this.handleCarouselArrowClick('left')}
+              className='fas fa-chevron-left' 
+            />
+            <img
+              src={`/assets/${carouselContent[0].images[currentContent]}-logo.png`} 
+              alt={carouselContent[0].images[currentContent]}
+            />
+            <i 
+              onClick={() => this.handleCarouselArrowClick('right')}
+              className='fas fa-chevron-right' 
+            />
+          </div>}
+        <div className='tv-phone-container'>
+          <Swipeable onSwiped={this.swiped}>
+            <Television currentImage={carouselContent[0].images[currentContent]} />
+            {copyTop && 
+              <p className='carousel-copy'>
+                {carouselContent[0].copies[currentContent]}
+              </p>}
+            <div className='dot-container'>
+              {carouselContent[0].images.map((image, index) => (
+                <div
+                  key={image}
+                  className={`dot ${currentContent === index ? 'dot-selected': ''}`}
+                  onClick={() => this.handleCarouselClick(index)} 
+                />
+              ))}
+            </div>
+            {copyBottom && 
+              <p className='carousel-copy'>
+                {carouselContent[0].copies[currentContent]}
+              </p>}
+          </Swipeable>
+          <Phone currentImage={carouselContent[0].images[currentContent]} />
+        </div>
       </Fragment>
     );
   }

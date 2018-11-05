@@ -1,7 +1,8 @@
 .section-game-one {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-top: -200px;
   margin-bottom: 50px;
 }
