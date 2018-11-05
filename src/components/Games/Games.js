@@ -8,7 +8,7 @@ const Games = () => (
   <Element name='games' className='element'>
     <BackgroundCopy bgCopy='Our Games' />
     <section className='section-game-one'>
-      <Carousel copyBottom bgCarousel />
+      <Carousel copyBottom bgCarousel gamesCarousel />
     </section>
   </Element>
 );

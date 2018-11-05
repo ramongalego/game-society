@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Carousel.css';
 import Phone from '../Phone';
 import Television from '../Television';
+import Secrets from '../Secrets';
 import { carouselContent } from '../../util/constants';
 import Swipeable from 'react-swipeable';
 
@@ -61,10 +62,15 @@ class Carousel extends Component {
 
   render() {
     const { currentContent } = this.state;
-    const { isSecret, copyTop, copyBottom, bgCarousel } = this.props;
+    const { isSecret, copyTop, copyBottom, bgCarousel, gamesCarousel } = this.props;
 
     if (isSecret) {
-      return <div>secret carousel</div>;
+      return (
+        <Secrets 
+          currentContent={currentContent} 
+          onCarouselClick={this.handleCarouselClick} 
+        />
+      );
     }
 
     return (
@@ -89,7 +95,7 @@ class Carousel extends Component {
             <Television currentImage={carouselContent[0].images[currentContent]} />
             {copyTop && 
               <p className='carousel-copy'>
-                {carouselContent[0].copies[currentContent]}
+                {gamesCarousel ? carouselContent[0].gamesCopies[currentContent] : carouselContent[0].copies[currentContent]}
               </p>}
             <div className='dot-container'>
               {carouselContent[0].images.map((image, index) => (
@@ -102,7 +108,7 @@ class Carousel extends Component {
             </div>
             {copyBottom && 
               <p className='carousel-copy'>
-                {carouselContent[0].copies[currentContent]}
+                {gamesCarousel ? carouselContent[0].gamesCopies[currentContent] : carouselContent[0].copies[currentContent]}
               </p>}
           </Swipeable>
           <Phone currentImage={carouselContent[0].images[currentContent]} />

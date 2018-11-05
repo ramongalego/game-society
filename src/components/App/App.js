@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header';
 import Welcome from '../Welcome';
+import Carousel from '../Carousel';
 import Games from '../Games';
 import AboutUs from '../AboutUs';
 import NewsLetter from '../NewsLetter';
@@ -16,6 +17,7 @@ class App extends Component {
           <Header />
           <section className='content-container'>
             <Welcome />
+            <Carousel isSecret />
             <Games />
             <AboutUs />
             <NewsLetter />
