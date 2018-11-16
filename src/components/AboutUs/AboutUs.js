@@ -11,8 +11,11 @@ const AboutUs = () => (
         bgCopy='About Us' 
         overlayCopy='About Us' />
       <ul className='members-list'>
-        {members.map(member => (
-          <li key={member.name} className='members-item'>
+        {members.map((member, index) => (
+          <li 
+            key={index} 
+            className='members-item'
+          >
             <div>
               <h3>{member.name}</h3>
               <p className='member-position'>{member.position}</p>

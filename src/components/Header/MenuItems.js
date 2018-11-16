@@ -35,7 +35,7 @@ class MenuItems extends Component {
         <ul className='menu-list'>
           {menuItems.map(item => (
             <li
-              className={`menu-items ${selectedItem === item ? 'selected-menu' : ''}`}
+              className={`menu-item ${selectedItem === item ? 'selected-menu' : ''}`}
               key={item}>
               <Link 
                 onClick={() => onSelectItem(item)} 

@@ -11,9 +11,9 @@ class Contact extends Component {
           <div className='contact-info'>
             <h1>CONTACT INFORMATION</h1>
             <p>Praesent in rhoncus ante. Ut in turpis eros. Duis erat enim, suscipit ac rutrum at, consectetur sed nulla. In et nibh porta, sodales urna ut, viverra eros. Ut in turpis eros. Praesent in rhoncus ante.</p>
-            {contactInfo.map(info => (
+            {contactInfo.map((info, index) => (
               <div 
-                key={info.icon}
+                key={index}
                 className='info-container'>
                 <i className={`fas fa-${info.icon}`} />
                 <div className='info-values'>
@@ -23,9 +23,9 @@ class Contact extends Component {
               </div>
             ))}
             <div className='social-container'>
-              {socialMedia.map(social => (
+              {socialMedia.map((social, index) => (
                 <a
-                  key={social.icon}
+                  key={index}
                   href={social.link}>
                   <i className={`fab fa-${social.icon}`} />
                 </a>

@@ -16,3 +16,30 @@
   position: relative;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 980px) {
+  .tv-outer {
+    width: 480px;
+    height: 275px;
+  }
+
+  .tv-inner {
+    width: 472px;
+    height: 265px;
+    left: 3px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .tv-outer {
+    width: 230px;
+    height: 133px;
+  }
+
+  .tv-inner {
+    width: 228px;
+    height: 127px;
+    left: 1px;
+    top: 2px;
+  }
+}

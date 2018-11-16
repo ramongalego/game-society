@@ -5,3 +5,17 @@
   width: 100%;
   margin-top: 20px;
 }
+
+
+@media only screen and (max-width: 980px) {
+  .section-welcome-one {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .section-welcome-one {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

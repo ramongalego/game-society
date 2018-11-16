@@ -11,9 +11,9 @@ const Footer = () => (
         <MenuItems />
         <p>Aliquam condimentum, urna vitae semper finibus, dolor nisl fringilla eros, vel hendrerit metus orci in urna.</p>
         <div className='social-footer'>
-          {socialMedia.map(social => (
+          {socialMedia.map((social, index) => (
             <a 
-              key={social.icon}
+              key={index}
               href={social.link}>
               <i className={`fab fa-${social.icon}`} />
             </a>

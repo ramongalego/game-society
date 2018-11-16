@@ -100,7 +100,7 @@ class Carousel extends Component {
             <div className='dot-container'>
               {carouselContent[0].images.map((image, index) => (
                 <div
-                  key={image}
+                  key={index}
                   className={`dot ${currentContent === index ? 'dot-selected': ''}`}
                   onClick={() => this.handleCarouselClick(index)} 
                 />

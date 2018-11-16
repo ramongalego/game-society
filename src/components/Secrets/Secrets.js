@@ -12,7 +12,7 @@ const Secrets = ({ currentContent, onCarouselClick }) => (
       <div className='dot-container'>
         {secretsContent.map((content, index) => (
           <div
-            key={content}
+            key={index}
             className={`dot ${currentContent === index ? 'dot-selected': ''}`}
             onClick={() => onCarouselClick(index)} 
           />

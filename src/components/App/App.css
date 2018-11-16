@@ -40,3 +40,16 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 725px) {
+  .header-container {
+    padding: 25px;
+  }
+
+  .main-logo {
+    width: 200px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

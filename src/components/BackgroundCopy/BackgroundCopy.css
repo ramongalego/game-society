@@ -10,7 +10,7 @@
   color: #1e2834;
   opacity: 0.2;
   z-index: 0;
-  font-size: 18rem;
+  font-size: 20vw;
 }
 
 .extra-copy {
@@ -35,4 +35,28 @@
   width: 30%;
   margin: 0 auto;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 980px) {
+  /* .section-welcome-one {
+    margin-bottom: 50px;
+  } */
+}
+
+@media only screen and (max-width: 725px) {
+  .bg-copy {
+    color: #fafafa;
+  }
+  .overlay-copy {
+    font-size: 1.5em;
+  }
+
+  .overlay-cta {
+    width: 100%;
+    font-size: 2.8em;
+  }
+
+  .extra-copy {
+    top: -75px;
+  }
 }

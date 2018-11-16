@@ -17,3 +17,32 @@
   position: relative;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 980px) {
+  .phone-outer {
+    width: 180px;
+    height: 350px;
+  }
+
+  .phone-inner {
+    top: 40px;
+    left: 10px;
+    width: 150px;
+    height: 270px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .phone-outer {
+    width: 63px;
+    height: 130px;
+    margin-left: 15px;
+  }
+
+  .phone-inner {
+    top: 15px;
+    left: 4px;
+    width: 55px;
+    height: 99px;
+  }
+}
