@@ -1,4 +1,4 @@
-  .dot-container {
+.dot-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,5 +67,9 @@
   .dot {
     width: 13px;
     height: 13px;
+  }
+
+  .bg-carousel-container img {
+    width: 250px;
   }
 }

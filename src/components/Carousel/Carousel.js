@@ -57,7 +57,7 @@ class Carousel extends Component {
   }
 
   swiped(e, deltaX) {
-    deltaX < 0 ? console.log('Swiped left!') : console.log('Swiped right!');
+    deltaX < 0 ? console.log('Swiped right!') : console.log('Swiped left!');
   }
 
   render() {

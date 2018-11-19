@@ -16,7 +16,7 @@ const AboutUs = () => (
             key={index} 
             className='members-item'
           >
-            <div>
+            <div className='member-info'>
               <h3>{member.name}</h3>
               <p className='member-position'>{member.position}</p>
               <p className='member-bio'>{member.bio}</p>

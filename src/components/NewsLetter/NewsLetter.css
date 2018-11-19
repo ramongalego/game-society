@@ -58,3 +58,77 @@ form .fa-envelope {
   font-family: AFB-Bold;
   font-size: 2.5em;
 }
+
+@media only screen and (max-width: 800px) {
+  .newsletter-container {
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .newsletter-content {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .newsletter-copy {
+    position: relative;
+    top: -50px;
+  }
+
+  .newsletter-copy h1 {
+    font-size: 2.5em;
+  }
+
+  .newsletter-content form {
+    width: 80%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .newsletter-content form input {
+    padding: 10px 0 10px 10px;
+  }
+
+  .newsletter-content form button {
+    right: 105px;
+    left: inherit;
+    position: absolute;  
+    padding: 5px 15px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .newsletter-container {
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .newsletter-copy {
+    top: auto;
+  }
+
+  .newsletter-content {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .newsletter-copy h1 {
+    font-size: 1.4em;
+  }
+
+  .newsletter-content form {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .newsletter-content form input {
+    padding: 10px 0 10px 10px;
+    font-size: 0.6em;
+  }
+
+  .newsletter-content form button {
+    right: 25px;
+    left: inherit;
+    position: absolute;  
+    padding: 5px 15px;
+  }
+}

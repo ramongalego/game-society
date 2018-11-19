@@ -57,3 +57,41 @@
   border-radius: 3px;
   font-size: 0.8em;
 }
+
+@media only screen and (max-width: 980px) {
+  .main-logo {
+    align-self: center;
+    width: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .footer-content p {
+    display: none;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .footer-bottom {
+    font-size: 0.8em;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .menu-list {
+    justify-content: center;
+    font-size: 0.5em;
+  }
+
+  .menu-item {
+    margin: 0;
+  }
+
+  .social-footer {
+    align-self: center;
+    font-size: 1.2em;
+  }
+}

@@ -40,7 +40,7 @@
   font-weight: 600;
 }
 
-.members-item .member-bio {
+.member-bio {
   width: 250px;
   color: #fff;
 }
@@ -49,4 +49,40 @@
   width: 180px;
   border-radius: 5px;
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 980px) {
+  .members-list {
+    margin-top: -100px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .members-list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .members-list li {
+    margin: 0 0 90px 0;
+    padding: 0 10px;
+  }
+
+  .members-item h3 {
+    font-size: 1.8em;
+  }
+
+  .members-item img {
+    width: 40%;
+  }
+
+  .member-bio {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .member-info {
+    width: 60%
+  }
 }

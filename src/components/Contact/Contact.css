@@ -125,3 +125,46 @@
   color: black;
   background: #fff;
 }
+
+@media only screen and (max-width: 980px) {
+  /* .section-welcome-one {
+    margin-bottom: 50px;
+  } */
+}
+
+@media only screen and (max-width: 850px) {
+  .section-contact {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .contact-info h1 {
+    font-size: 2em;
+  }
+
+  .social-container {
+    display: none;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0 0 50px 0;
+  }
+
+  .double-input {
+    flex-direction: column;
+  }
+
+  .double-input input {
+    width: 100%;
+  }
+
+  .double-input input:first-child {
+    margin-bottom: 10px;
+  }
+}

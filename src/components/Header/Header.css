@@ -141,4 +141,12 @@
   .header-container {
     padding: 10px;
   }
+
+  .mobile-menu-container {
+    width: 220px;
+  }
+
+  .mobile-menu-bottom {
+    width: 220px;
+  }
 }

@@ -38,9 +38,9 @@
 }
 
 @media only screen and (max-width: 980px) {
-  /* .section-welcome-one {
-    margin-bottom: 50px;
-  } */
+  .extra-copy {
+    top: -170px;
+  }
 }
 
 @media only screen and (max-width: 725px) {
@@ -58,5 +58,9 @@
 
   .extra-copy {
     top: -75px;
+  }
+
+  .overlay-single-copy {
+    font-size: 2.5em;
   }
 }
