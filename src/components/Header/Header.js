@@ -43,12 +43,12 @@ class Header extends Component {
         >
           <h1><i className="fas fa-bars"></i></h1>
         </div>
-        {isMenuVisible && 
-          <MobileMenu 
-            onSelectItem={this.handleSelectItem}
-            selectedItem={selectedItem}
-            onToggleMobileMenu={this.handleToggleMobileMenu}
-          />}
+        <MobileMenu 
+          onSelectItem={this.handleSelectItem}
+          selectedItem={selectedItem}
+          onToggleMobileMenu={this.handleToggleMobileMenu}
+          isMenuVisible={isMenuVisible}
+        />
       </div>
     );
   }

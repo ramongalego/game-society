@@ -34,6 +34,21 @@
 
 @media only screen and (max-width: 725px) {
   .phone-outer {
+    width: 110px;
+    height: 230px;
+    margin-left: 15px;
+  }
+
+  .phone-inner {
+    top: 25px;
+    left: 8px;
+    width: 93px;
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .phone-outer {
     width: 63px;
     height: 130px;
     margin-left: 15px;

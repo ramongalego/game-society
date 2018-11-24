@@ -58,8 +58,19 @@
 
 @media only screen and (max-width: 725px) {
   .carousel-copy {
-    width: 230px;
-    font-size: 0.6em;
+    position: absolute;
+    width: 500px;
+    font-size: 0.8em;
+    margin-left: 1px;
+    padding: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel-copy {
+    position: absolute;
+    width: 300px;
+    font-size: 0.7em;
     margin-left: 1px;
     padding: 5px 0;
   }

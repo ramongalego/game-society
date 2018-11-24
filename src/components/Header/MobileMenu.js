@@ -5,11 +5,11 @@ import { socialMedia } from '../../util/constants';
 
 class MobileMenu extends Component {
   render() {
-    const { onSelectItem, selectedItem, onToggleMobileMenu } = this.props;
+    const { onSelectItem, selectedItem, onToggleMobileMenu, isMenuVisible } = this.props;
 
     return (
       <div 
-        className='mobile-menu-container'
+        className={`mobile-menu-container ${isMenuVisible ? 'animate-in' : 'animate-out'}`}
       >
         <section className='mobile-menu-top'>
           <h1 onClick={onToggleMobileMenu}>
