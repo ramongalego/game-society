@@ -7,7 +7,7 @@ import { Element } from 'react-scroll';
 const Welcome = () => (
   <Fragment>
     <section className='section-welcome-one'>
-        <Carousel copyBottom />
+        <Carousel />
       </section>
     <Element name='what is game society?' className='element'>
       <BackgroundCopy 

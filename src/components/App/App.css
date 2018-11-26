@@ -1,6 +1,7 @@
 .app-container {
   position: absolute;
   width: 100%;
+  overflow: hidden;
   background: darkgrey;
   background-image: url('/assets/pillar-background.png');
   background-size: cover;

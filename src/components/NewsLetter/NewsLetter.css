@@ -2,6 +2,7 @@
   width: 100%;
   height: 360px;
   background: -webkit-linear-gradient(left, #a43ee7, #737ef6);
+  overflow: hidden;
 }
 
 .newsletter-content {
@@ -14,11 +15,14 @@
   align-items: center;
   z-index: 1;
   color: white;
+  padding-left: 6rem;
 }
 
 .newsletter-content form {
+  max-width: 600px;
   display: flex;
   flex-direction: row;
+  margin-left: 95px;
 }
 
 .newsletter-content input {
@@ -59,6 +63,12 @@ form .fa-envelope {
   font-size: 2.5em;
 }
 
+@media only screen and (min-width: 1600px) {
+  .newsletter-container {
+    height: 420px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .newsletter-container {
     height: auto;
@@ -68,6 +78,7 @@ form .fa-envelope {
   .newsletter-content {
     margin-top: -30px;
     flex-direction: column;
+    padding-left: 0;
   }
 
   .newsletter-copy {
@@ -81,7 +92,6 @@ form .fa-envelope {
 
   .newsletter-content form {
     width: 100%;
-    padding: 20px 20px 0 20px;
   }
 
   .newsletter-content form input {
@@ -90,9 +100,8 @@ form .fa-envelope {
   }
 
   .newsletter-content form button {
-    right: 25px;
+    right: 95px;
     left: inherit;
-    position: absolute;  
     padding: 5px 15px;
   }
 }
@@ -106,6 +115,7 @@ form .fa-envelope {
   .newsletter-content {
     margin-top: -30px;
     flex-direction: column;
+    padding-left: 0;
   }
 
   .newsletter-copy {
@@ -119,7 +129,6 @@ form .fa-envelope {
 
   .newsletter-content form {
     width: 100%;
-    padding: 20px 20px 0 20px;
   }
 
   .newsletter-content form input {
@@ -128,9 +137,8 @@ form .fa-envelope {
   }
 
   .newsletter-content form button {
-    right: 25px;
-    left: inherit;
-    position: absolute;  
+    right: 95px;
+    left: inherit;  
     padding: 5px 15px;
   }
 }
@@ -144,10 +152,11 @@ form .fa-envelope {
   .newsletter-content {
     margin-top: -30px;
     flex-direction: column;
+    padding-left: 0;
   }
 
   .newsletter-copy {
-    top: 0;
+    top: -20px;
   }
 
   .newsletter-copy h1 {
@@ -156,7 +165,6 @@ form .fa-envelope {
 
   .newsletter-content form {
     width: 100%;
-    padding: 20px 20px 0 20px;
   }
 
   .newsletter-content form input {
@@ -165,9 +173,8 @@ form .fa-envelope {
   }
 
   .newsletter-content form button {
-    right: 25px;
+    right: 95px;
     left: inherit;
-    position: absolute;  
     padding: 5px 15px;
   }
 }
@@ -179,12 +186,13 @@ form .fa-envelope {
   }
 
   .newsletter-copy {
-    top: auto;
+    top: -10px;
   }
 
   .newsletter-content {
     margin-top: 0px;
     flex-direction: column;
+    padding-left: 0;
   }
 
   .newsletter-copy h1 {
@@ -192,19 +200,20 @@ form .fa-envelope {
   }
 
   .newsletter-content form {
-    width: 100%;
-    padding: 20px 20px 0 20px;
+    width: 370px;
+    margin-top: 10px;
   }
 
   .newsletter-content form input {
     padding: 10px 0 10px 10px;
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 
   .newsletter-content form button {
-    right: 25px;
+    display: flex;
+    right: 85px;
     left: inherit;
-    position: absolute;  
     padding: 5px 15px;
+    font-size: 0.6em;
   }
 }

@@ -2,33 +2,33 @@
   background-image: url('/assets/iphone.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 250px;
-  height: 500px;
+  width: 185px;
+  height: 380px;
   margin-left: 50px;
 }
 
 .phone-inner {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 211px;
-  height: 377px;
-  left: 15px;
-  top: 60px;
+  width: 160px;
+  height: 290px;
+  left: 12px;
+  top: 40px;
   position: relative;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 980px) {
   .phone-outer {
-    width: 180px;
-    height: 350px;
+    width: 136px;
+    height: 280px;
   }
 
   .phone-inner {
-    top: 40px;
+    top: 30px;
     left: 10px;
-    width: 150px;
-    height: 270px;
+    width: 115px;
+    height: 210px;
   }
 }
 

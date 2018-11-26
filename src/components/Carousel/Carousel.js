@@ -10,13 +10,12 @@ import Swipeable from 'react-swipeable';
 class Carousel extends Component {
   state = {
     currentContent: 0,
-    intervalId: null
+    intervalId: null,
+    isUsingCarousel: false
   }
 
   static propTypes = {
-    isSecret: PropTypes.bool,
-    copyTop: PropTypes.bool,
-    copyBottom: PropTypes.bool
+    isSecret: PropTypes.bool
   }
 
   componentDidMount() {
@@ -30,20 +29,27 @@ class Carousel extends Component {
   }
 
   handleCarouselTiming = () => {
-    const { currentContent } = this.state;
+    const { currentContent, isUsingCarousel } = this.state;
 
-    currentContent < (carouselContent[0].images.length - 1)
-      ? this.setState({ currentContent: currentContent + 1 })
-      : this.setState({ currentContent: 0 });
+    if (!isUsingCarousel) {
+      currentContent < (carouselContent[0].images.length - 1)
+        ? this.setState({ currentContent: currentContent + 1 })
+        : this.setState({ currentContent: 0 });
+    }
   }
 
   handleCarouselClick = (index) => {
-    this.setState({ currentContent: index });
+    this.setState({ 
+      currentContent: index,
+      isUsingCarousel: true
+    });
   }
 
   handleCarouselArrowClick = (direction) => {
     const { currentContent } = this.state;
     const contentLimit = carouselContent[0].images.length - 1;
+
+    this.setState({ isUsingCarousel: true });
 
     if (currentContent === 0 && direction === 'left') {
       this.setState({ currentContent: contentLimit });
@@ -56,13 +62,13 @@ class Carousel extends Component {
     }
   }
 
-  swiped(e, deltaX) {
-    deltaX < 0 ? console.log('Swiped right!') : console.log('Swiped left!');
+  swiped = (e, deltaX) => {
+    deltaX < 0 ? this.handleCarouselArrowClick('right') : this.handleCarouselArrowClick('left');
   }
 
   render() {
     const { currentContent } = this.state;
-    const { isSecret, copyTop, copyBottom, bgCarousel, gamesCarousel } = this.props;
+    const { isSecret, bgCarousel, gamesCarousel } = this.props;
 
     if (isSecret) {
       return (
@@ -90,28 +96,25 @@ class Carousel extends Component {
               className='fas fa-chevron-right' 
             />
           </div>}
-        <div className='tv-phone-container'>
-          <Swipeable onSwiped={this.swiped}>
-            <Television currentImage={carouselContent[0].images[currentContent]} />
-            {copyTop && 
-              <p className='carousel-copy'>
-                {gamesCarousel ? carouselContent[0].gamesCopies[currentContent] : carouselContent[0].copies[currentContent]}
-              </p>}
-            <div className='dot-container'>
-              {carouselContent[0].images.map((image, index) => (
-                <div
-                  key={index}
-                  className={`dot ${currentContent === index ? 'dot-selected': ''}`}
-                  onClick={() => this.handleCarouselClick(index)} 
-                />
-              ))}
-            </div>
-            {copyBottom && 
-              <p className='carousel-copy'>
-                {gamesCarousel ? carouselContent[0].gamesCopies[currentContent] : carouselContent[0].copies[currentContent]}
-              </p>}
-          </Swipeable>
-          <Phone currentImage={carouselContent[0].images[currentContent]} />
+        <div className='carousel-container'>
+          <div className='tv-phone-container'>
+            <Swipeable onSwiped={this.swiped}>
+              <Television currentImage={carouselContent[0].images[currentContent]} />
+            </Swipeable>
+            <Phone currentImage={carouselContent[0].images[currentContent]} />
+          </div>
+          <div className='dot-container'>
+            {carouselContent[0].images.map((image, index) => (
+              <div
+                key={index}
+                className={`dot ${currentContent === index ? 'dot-selected': ''}`}
+                onClick={() => this.handleCarouselClick(index)} 
+              />
+            ))}
+          </div>
+          <p className='carousel-copy'>
+            {gamesCarousel ? carouselContent[0].gamesCopies[currentContent] : carouselContent[0].copies[currentContent]}
+          </p>
         </div>
       </Fragment>
     );

@@ -37,6 +37,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (min-width: 1200px) {
+  .bg-copy {
+    font-size: 18vw;
+  }
+}
+
 @media only screen and (max-width: 980px) {
   .extra-copy {
     top: -170px;
@@ -47,6 +53,7 @@
   .bg-copy {
     color: #fafafa;
   }
+
   .overlay-copy {
     font-size: 1.5em;
   }
