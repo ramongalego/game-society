@@ -45,6 +45,7 @@
   align-self: center;
   border-radius: 5px;
   padding: 5px 20px;
+  font-size: 11px;
 }
 
 form .fa-envelope {
@@ -66,6 +67,11 @@ form .fa-envelope {
 @media only screen and (min-width: 1600px) {
   .newsletter-container {
     height: 420px;
+  }
+
+  .newsletter-content {
+    margin: -140px auto;
+    max-width: 1620px;
   }
 }
 
@@ -96,7 +102,7 @@ form .fa-envelope {
 
   .newsletter-content form input {
     padding: 10px 0 10px 10px;
-    font-size: 0.6em;
+    font-size: 11px;
   }
 
   .newsletter-content form button {
@@ -133,7 +139,7 @@ form .fa-envelope {
 
   .newsletter-content form input {
     padding: 10px 0 10px 10px;
-    font-size: 0.6em;
+    font-size: 11px;
   }
 
   .newsletter-content form button {
@@ -169,7 +175,7 @@ form .fa-envelope {
 
   .newsletter-content form input {
     padding: 10px 0 10px 10px;
-    font-size: 0.6em;
+    font-size: 11px;
   }
 
   .newsletter-content form button {
@@ -206,7 +212,7 @@ form .fa-envelope {
 
   .newsletter-content form input {
     padding: 10px 0 10px 10px;
-    font-size: 0.5em;
+    font-size: 10px;
   }
 
   .newsletter-content form button {
@@ -214,6 +220,6 @@ form .fa-envelope {
     right: 85px;
     left: inherit;
     padding: 5px 15px;
-    font-size: 0.6em;
+    font-size: 10px;
   }
 }

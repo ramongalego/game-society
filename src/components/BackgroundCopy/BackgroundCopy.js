@@ -12,14 +12,22 @@ class BackgroundCopy extends Component {
     overlayCopy: PropTypes.string,
     overlayCta: PropTypes.string,
     copyColour: PropTypes.string,
-    isCarousel: PropTypes.bool
+    isCarousel: PropTypes.bool,
+    patternBg: PropTypes.bool
   }
 
   render() {
-    const { copyColour, bgCopy, overlayCopy, overlayCta } = this.props;
+    const { copyColour, bgCopy, overlayCopy, overlayCta, patternBg } = this.props;
 
     return (
-      <div className='bg-copy-container'>
+      <div className={`bg-copy-container`}>
+        {patternBg &&
+          <img 
+            className='pattern-bg' 
+            src='/assets/pattern-bg.png' 
+            alt='pattern' 
+          />}
+
         <h1 className='bg-copy' style={copyColour ? { color: copyColour } : {} }>
           {bgCopy}
         </h1>
